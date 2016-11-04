@@ -1,16 +1,20 @@
 package inf3995_03.javachess.controller;
 
 import android.graphics.drawable.Drawable;
+import android.icu.text.DateFormat;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+
+import inf3995_03.javachess.activities.BoardActivity;
+import inf3995_03.javachess.views.ChessSquareView;
 
 /**
  * Created by lester on 16-11-03.
  */
 
-public class CycleStateListener implements View.OnTouchListener {
-    @Override
+public class CycleStateListener {//implements View.OnTouchListener {
+    /*@Override
     public boolean onTouch(View arg0, MotionEvent arg1) {
         if(arg1.getAction() == MotionEvent.ACTION_DOWN){
             Drawable back = arg0.getBackground();
@@ -31,5 +35,5 @@ public class CycleStateListener implements View.OnTouchListener {
             return true;
         }
         return false;
-    }
+    }*/
 }
