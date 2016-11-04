@@ -19,6 +19,7 @@ public class ChessSquareView extends ImageView {
         super(context, attributes);
         setClickable(true);
     }
+
     /*
     public void setPiece(IChessPiece _piece){
         mPiece = _piece;
