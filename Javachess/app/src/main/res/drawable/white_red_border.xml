@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:drawable="@drawable/blue_square" />
+        android:drawable="@drawable/red_border" />
     <item
         android:drawable="@drawable/white_inset"
         android:top="3dp"

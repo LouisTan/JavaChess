@@ -18,33 +18,11 @@ public class BoardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.board_layout);
 
-        ChessSquareView chessboard = (ChessSquareView)findViewById(R.id.a1);
+        ChessSquareView chessboard = (ChessSquareView)findViewById(R.id.a8);
         //CycleStateListener stateListener = new CycleStateListener();
 
-        chessboard.setOnTouchListener(handleTouch);
+        chessboard.setOnTouchListener(stateListener);
     }
-    private View.OnTouchListener handleTouch = new View.OnTouchListener() {
-
-        @Override
-        public boolean onTouch(View v, MotionEvent event) {
-
-            int x = (int) event.getX();
-            int y = (int) event.getY();
-
-            switch (event.getAction()) {
-                case MotionEvent.ACTION_DOWN:
-                    Log.i("TAG", "touched down");
-                    break;
-                case MotionEvent.ACTION_MOVE:
-                    Log.i("TAG", "moving: (" + x + ", " + y + ")");
-                    break;
-                case MotionEvent.ACTION_UP:
-                    Log.i("TAG", "touched up");
-                    break;
-            }
-
-            return true;
-        }
-    };
+    private CycleStateListener stateListener = new CycleStateListener();
 
 }

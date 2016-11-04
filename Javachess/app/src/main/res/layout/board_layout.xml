@@ -56,7 +56,7 @@
     android:id="@+id/a7" />
 
     <inf3995_03.javachess.views.ChessSquareView
-    android:background="@drawable/white_square"
+    android:background="@drawable/white"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:id="@+id/a8" />
