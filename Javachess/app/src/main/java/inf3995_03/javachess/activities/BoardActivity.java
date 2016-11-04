@@ -1,13 +1,15 @@
-package inf3995_03.javachess;
+package inf3995_03.javachess.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Board extends AppCompatActivity {
+import inf3995_03.javachess.R;
+
+public class BoardActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.board);
+        setContentView(R.layout.board_layout);
     }
 }
