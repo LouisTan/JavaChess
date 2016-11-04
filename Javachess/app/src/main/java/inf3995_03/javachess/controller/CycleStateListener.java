@@ -1,13 +1,9 @@
 package inf3995_03.javachess.controller;
 
 import android.graphics.drawable.Drawable;
-import android.icu.text.DateFormat;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-
-import inf3995_03.javachess.activities.BoardActivity;
-import inf3995_03.javachess.views.ChessSquareView;
 
 /**
  * Created by lester on 16-11-03.

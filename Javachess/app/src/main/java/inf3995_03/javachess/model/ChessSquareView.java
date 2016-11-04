@@ -1,7 +1,6 @@
-package inf3995_03.javachess.views;
+package inf3995_03.javachess.model;
 
 import android.content.Context;
-import android.graphics.Canvas;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
@@ -15,6 +14,8 @@ public class ChessSquareView extends ImageView {
         super(context);
         setClickable(true);
     }
+
+    //NB: AttributeSet = {...provides an efficient mechanism for retrieving data from compiled XML files}
     public ChessSquareView(Context context, AttributeSet attributes) {
         super(context, attributes);
         setClickable(true);

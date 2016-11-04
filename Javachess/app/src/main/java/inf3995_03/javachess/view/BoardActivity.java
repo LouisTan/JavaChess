@@ -1,14 +1,11 @@
-package inf3995_03.javachess.activities;
+package inf3995_03.javachess.view;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.MotionEvent;
-import android.view.View;
 
 import inf3995_03.javachess.R;
 import inf3995_03.javachess.controller.CycleStateListener;
-import inf3995_03.javachess.views.ChessSquareView;
+import inf3995_03.javachess.model.ChessSquareView;
 
 public class BoardActivity extends AppCompatActivity {
 
@@ -19,7 +16,6 @@ public class BoardActivity extends AppCompatActivity {
         setContentView(R.layout.board_layout);
 
         ChessSquareView chessboard = (ChessSquareView)findViewById(R.id.a8);
-        //CycleStateListener stateListener = new CycleStateListener();
 
         chessboard.setOnTouchListener(stateListener);
     }
