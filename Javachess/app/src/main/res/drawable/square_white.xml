@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <level-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:drawable="@drawable/white_square"
+        android:drawable="@drawable/square_white_square"
         android:maxLevel="0" />
     <item
-        android:drawable="@drawable/white_red_border"
+        android:drawable="@drawable/square_white_red_border"
         android:maxLevel="1" />
     <item
-        android:drawable="@drawable/white_blue_border"
+        android:drawable="@drawable/square_white_blue_border"
         android:maxLevel="2" />
 </level-list>

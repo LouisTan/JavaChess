@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:drawable="@drawable/red_border" />
+        android:drawable="@drawable/square_red_border" />
     <item
-        android:drawable="@drawable/white_inset"
+        android:drawable="@drawable/square_black_inset"
         android:top="3dp"
         android:bottom="3dp"
         android:left="3dp"
