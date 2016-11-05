@@ -7,15 +7,11 @@ import java.util.HashMap;
 
 import inf3995_03.javachess.R;
 import inf3995_03.javachess.controller.CycleStateListener;
-import inf3995_03.javachess.model.ChessSquareView;
 
 public class BoardActivity extends AppCompatActivity {
 
-    private CycleStateListener stateListener = new CycleStateListener();
-    private static boolean isOccupied = false;
-
     private static final HashMap<String, ChessSquareView> chessMap = new HashMap<>();
-
+    private CycleStateListener stateListener = new CycleStateListener();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +19,7 @@ public class BoardActivity extends AppCompatActivity {
         setContentView(R.layout.board_layout);
 
         initChessboard();
+
     }
 
     public void initChessboard() {
@@ -42,10 +39,5 @@ public class BoardActivity extends AppCompatActivity {
             }
         }
 
-    }//initChesboard
-
-    public static boolean isOnBoard(String position) {
-        return isOccupied;
-    }
-
+    }//initChessboard
 }

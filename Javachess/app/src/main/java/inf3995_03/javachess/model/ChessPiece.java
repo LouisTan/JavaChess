@@ -1,13 +1,19 @@
 package inf3995_03.javachess.model;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.support.v7.app.AppCompatActivity;
+
+import inf3995_03.javachess.R;
 import inf3995_03.javachess.view.BoardActivity;
+
 
 /**
  * Created by lester on 16-11-05.
  * Based on http://faculty.washington.edu/stepp/courses/2005spring/tcss360/lectures/files/2005-05-25/Piece.java
  */
 
-public class ChessPiece {
+public class ChessPiece extends AppCompatActivity{
     public static final String BLACK = "Black";
     public static final String WHITE = "White";
 
@@ -21,20 +27,99 @@ public class ChessPiece {
     private String color;
     private String type;
     private String position;
+    private Bitmap image;
 
     public ChessPiece(String color, String type, String position) {
         if (!(color.equals(BLACK) || color.equals(WHITE))
-           || !(type.equals(KING) || type.equals(QUEEN)
-           || type.equals(BISHOP) || type.equals(KNIGHT)
-           || type.equals(ROOK)   || type.equals(PAWN))
-           || !BoardActivity.isOnBoard(position))
-        {
+                || !(type.equals(KING) || type.equals(QUEEN)
+                || type.equals(BISHOP) || type.equals(KNIGHT)
+                || type.equals(ROOK) || type.equals(PAWN))
+                || !BoardActivity.isOnBoard(position)) {
             throw new IllegalArgumentException();
         }
 
-        this.color      = color;
-        this.type       = type;
-        this.position	= position;
+        this.color = color;
+        this.type = type;
+        this.position = position;
+
+        if (color.equals(BLACK)) {
+            switch (type){
+                case KING:
+                    this.image = BitmapFactory.decodeResource(getResources(), R.drawable.piece_kb);
+                    break;
+                case QUEEN:
+                    this.image = BitmapFactory.decodeResource(getResources(), R.drawable.piece_qb);
+                    break;
+                case BISHOP:
+                    this.image = BitmapFactory.decodeResource(getResources(), R.drawable.piece_bb);
+                    break;
+                case KNIGHT:
+                    this.image = BitmapFactory.decodeResource(getResources(), R.drawable.piece_nb);
+                    break;
+                case ROOK:
+                    this.image = BitmapFactory.decodeResource(getResources(), R.drawable.piece_rb);
+                    break;
+                case PAWN:
+                    this.image = BitmapFactory.decodeResource(getResources(), R.drawable.piece_pb);
+                    break;
+            }
+
+        } else {
+            switch (type){
+                case KING:
+                    this.image = BitmapFactory.decodeResource(getResources(), R.drawable.piece_kw);
+                    break;
+                case QUEEN:
+                    this.image = BitmapFactory.decodeResource(getResources(), R.drawable.piece_qw);
+                    break;
+                case BISHOP:
+                    this.image = BitmapFactory.decodeResource(getResources(), R.drawable.piece_bw);
+                    break;
+                case KNIGHT:
+                    this.image = BitmapFactory.decodeResource(getResources(), R.drawable.piece_nw);
+                    break;
+                case ROOK:
+                    this.image = BitmapFactory.decodeResource(getResources(), R.drawable.piece_rw);
+                    break;
+                case PAWN:
+                    this.image = BitmapFactory.decodeResource(getResources(), R.drawable.piece_pw);
+                    break;
+            }
+        }
+
+    } //ChessPiece
+
+
+    //Getters
+    public String getColor() {
+        return color;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public Bitmap getImage() {
+        return image;
+    }
+
+    //Setters
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+
+
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
+    public void setImage(Bitmap image) {
+         this.image = image;
     }
 
 }

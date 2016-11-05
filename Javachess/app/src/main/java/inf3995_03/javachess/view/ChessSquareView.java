@@ -1,15 +1,18 @@
-package inf3995_03.javachess.model;
+package inf3995_03.javachess.view;
 
 import android.content.Context;
+import android.graphics.Canvas;
 import android.util.AttributeSet;
 import android.widget.ImageView;
+
+import inf3995_03.javachess.model.ChessPiece;
 
 /**
  * Created by lester on 16-11-03.
  */
 
 public class ChessSquareView extends ImageView {
-    //private IChessPiece mPiece = new NullPiece();
+    private ChessPiece chessPiece;
     public ChessSquareView(Context context){
         super(context);
         setClickable(true);
@@ -21,23 +24,16 @@ public class ChessSquareView extends ImageView {
         setClickable(true);
     }
 
-
-
-
-            //.put( "_a1", new (ChessSquareView)findViewById(R.id.a1) );
-
-
-    /*
-    public void setPiece(IChessPiece _piece){
-        mPiece = _piece;
+    public void setPiece(ChessPiece chessPiece){
+        this.chessPiece = chessPiece;
     }
-    public IChessPiece getPiece(){
-        return mPiece;
+    public ChessPiece getPiece(){
+        return this.chessPiece;
     }
 
     @Override
-    protected void onDraw(Canvas _canvas){
-        super.onDraw(_canvas);
-        mPiece.draw(_canvas, getPaddingLeft(), getPaddingTop());
-    }*/
+    protected void onDraw(Canvas canvas){
+        super.onDraw(canvas);
+        //chessPiece.draw(canvas);
+    }
 }
