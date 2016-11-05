@@ -7,6 +7,7 @@ import android.view.View;
 
 /**
  * Created by lester on 16-11-03.
+ * Based on https://staticallytyped.wordpress.com/2011/02/01/android-avoiding-custom-views-with-resources-cont/
  */
 
 public class CycleStateListener implements View.OnTouchListener {
