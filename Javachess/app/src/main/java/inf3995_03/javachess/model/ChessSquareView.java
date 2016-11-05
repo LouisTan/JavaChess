@@ -4,11 +4,6 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import inf3995_03.javachess.R;
-
 /**
  * Created by lester on 16-11-03.
  */
@@ -26,8 +21,10 @@ public class ChessSquareView extends ImageView {
         setClickable(true);
     }
 
-    Map<String, ChessSquareView> ChessMap = new HashMap<String, ChessSquareView()>();
-    ChessMap.put("_a1", new (ChessSquareView)findViewById(R.id.a1));
+
+
+
+            //.put( "_a1", new (ChessSquareView)findViewById(R.id.a1) );
 
 
     /*
