@@ -33,13 +33,6 @@ public class BoardActivity extends AppCompatActivity {
 
         initChessSquares();
         initChessPieces();
-        /*
-        T-ODO: chessSquareViewMap.get(pos).setOnTouchListener(stateListener) should be called after
-        intiChessSquares() and initChessPieces() so we can only touch the squares occupied by a chess piece.
-
-        initTouchEvents();
-         */
-
         drawChessPieces();
     }
 
@@ -55,7 +48,6 @@ public class BoardActivity extends AppCompatActivity {
                 int idRes = getResources().getIdentifier(pos, "id", getPackageName());
 
                 chessSquareViewMap.put(pos, (ChessSquareView) findViewById(idRes));
-                chessSquareViewMap.get(pos).setOnTouchListener(stateListener);
             }
         }
     }//initChessSquares
@@ -106,6 +98,7 @@ public class BoardActivity extends AppCompatActivity {
     public void drawChessPieces(){
         for (Map.Entry<String, ChessPiece> entry :chessPieceMap.entrySet()) {
             chessSquareViewMap.get(entry.getKey()).setImageBitmap(chessPieceMap.get(entry.getKey()).getImage());
+            chessSquareViewMap.get(entry.getKey()).setOnTouchListener(stateListener);
         }
 
     }//drawChessPieces()
