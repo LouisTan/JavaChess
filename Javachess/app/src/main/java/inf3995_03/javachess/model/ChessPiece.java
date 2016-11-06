@@ -26,22 +26,21 @@ public class ChessPiece extends AppCompatActivity{
 
     private String color;
     private String type;
-    private ChessSquare position;
+    //private ChessSquare position;
     private Bitmap image;
 
-    public ChessPiece(String color, String type, String position) {
-        if (!(color.equals(BLACK) || color.equals(WHITE))
-           || !(type.equals(KING) || type.equals(QUEEN)
-           || type.equals(BISHOP) || type.equals(KNIGHT)
-           || type.equals(ROOK)   || type.equals(PAWN))){
-         //|| !ChessSquare.isOccupied(position))
-      //{
+    public ChessPiece(String color, String type){//, String position) {
+        if (!(color.equals(BLACK)  || color.equals(WHITE))
+            || !(type.equals(KING) || type.equals(QUEEN)
+            || type.equals(BISHOP) || type.equals(KNIGHT)
+            || type.equals(ROOK)   || type.equals(PAWN)))
+        {
            throw new IllegalArgumentException();
         }
 
         this.color = color;
         this.type = type;
-        this.position = chessMap.get(position);
+        //this.position = chessMap.get(position);
 
 
 
@@ -101,9 +100,9 @@ public class ChessPiece extends AppCompatActivity{
         return type;
     }
 
-    public ChessSquare getPosition() {
+   /* public ChessSquare getPosition() {
         return position;
-    }
+    }*/
 
     public Bitmap getImage() {
         return image;
@@ -116,9 +115,9 @@ public class ChessPiece extends AppCompatActivity{
 
     //(No setter for type)
 
-    public void setPosition(ChessSquare position) {
+   /* public void setPosition(ChessSquare position) {
         this.position = position;
-    }
+    }*/
 
     public void setImage(Bitmap image) {
          this.image = image;

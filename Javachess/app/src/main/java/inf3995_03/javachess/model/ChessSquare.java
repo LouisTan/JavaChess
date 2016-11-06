@@ -12,8 +12,7 @@ import inf3995_03.javachess.model.ChessPiece;
  */
 
 public class ChessSquare extends ImageView {
-    private ChessPiece chessPiece = null;
-    private boolean isBusy = false;
+    private boolean isBusy;
     private String position;
 
     public ChessSquare(Context context){
@@ -21,13 +20,7 @@ public class ChessSquare extends ImageView {
         setClickable(true);
     }
 
-
-
     //Getters
-    public ChessPiece getPiece(){
-        return this.chessPiece;
-    }
-
     public boolean getIsBusy() {
         return this.isBusy;
     }
@@ -37,10 +30,6 @@ public class ChessSquare extends ImageView {
     }
 
     //Setters
-    public void setPiece(ChessPiece chessPiece){
-        this.chessPiece = chessPiece;
-    }
-
     public void setIsBusy(boolean isBusy) {
         this.isBusy = isBusy;
     }
