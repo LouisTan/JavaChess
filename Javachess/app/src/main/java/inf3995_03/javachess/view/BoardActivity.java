@@ -1,7 +1,5 @@
 package inf3995_03.javachess.view;
 
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -61,7 +59,7 @@ public class BoardActivity extends AppCompatActivity {
             String col = (char) (i) + "";
             String pos = col + Integer.toString(7);
 
-            chessPieceMap.put(pos, new ChessPiece(BLACK,PAWN,getApplicationContext()));
+            chessPieceMap.put(pos, new ChessPiece(BLACK,PAWN,pos,getApplicationContext()));
         }
 
         //White pawns initialisation
@@ -70,28 +68,28 @@ public class BoardActivity extends AppCompatActivity {
             String col = (char) (i) + "";
             String pos = col + Integer.toString(2);
 
-           chessPieceMap.put(pos, new ChessPiece(WHITE,PAWN,getApplicationContext()));
+           chessPieceMap.put(pos, new ChessPiece(WHITE,PAWN,pos,getApplicationContext()));
         }
 
-        chessPieceMap.put("e8", new ChessPiece(BLACK,KING,getApplicationContext()));
-        chessPieceMap.put("e1", new ChessPiece(WHITE,KING,getApplicationContext()));
+        chessPieceMap.put("e8", new ChessPiece(BLACK,KING,"e8",getApplicationContext()));
+        chessPieceMap.put("e1", new ChessPiece(WHITE,KING,"e1",getApplicationContext()));
 
-        chessPieceMap.put("d8", new ChessPiece(BLACK,QUEEN,getApplicationContext()));
-        chessPieceMap.put("d1", new ChessPiece(WHITE,QUEEN,getApplicationContext()));
+        chessPieceMap.put("d8", new ChessPiece(BLACK,QUEEN,"d8",getApplicationContext()));
+        chessPieceMap.put("d1", new ChessPiece(WHITE,QUEEN,"d1",getApplicationContext()));
 
-        chessPieceMap.put("c8", new ChessPiece(BLACK,BISHOP,getApplicationContext()));
-        chessPieceMap.put("c1", new ChessPiece(WHITE,BISHOP,getApplicationContext()));
-        chessPieceMap.put("f1", new ChessPiece(WHITE,BISHOP,getApplicationContext()));
+        chessPieceMap.put("c8", new ChessPiece(BLACK,BISHOP,"c8",getApplicationContext()));
+        chessPieceMap.put("c1", new ChessPiece(WHITE,BISHOP,"c1",getApplicationContext()));
+        chessPieceMap.put("f1", new ChessPiece(WHITE,BISHOP,"f1",getApplicationContext()));
 
-        chessPieceMap.put("b8", new ChessPiece(BLACK,KNIGHT,getApplicationContext()));
-        chessPieceMap.put("g8", new ChessPiece(BLACK,KNIGHT,getApplicationContext()));
-        chessPieceMap.put("b1", new ChessPiece(WHITE,KNIGHT,getApplicationContext()));
-        chessPieceMap.put("g1", new ChessPiece(WHITE,KNIGHT,getApplicationContext()));
+        chessPieceMap.put("b8", new ChessPiece(BLACK,KNIGHT,"b8",getApplicationContext()));
+        chessPieceMap.put("g8", new ChessPiece(BLACK,KNIGHT,"g8",getApplicationContext()));
+        chessPieceMap.put("b1", new ChessPiece(WHITE,KNIGHT,"b1",getApplicationContext()));
+        chessPieceMap.put("g1", new ChessPiece(WHITE,KNIGHT,"g1",getApplicationContext()));
 
-        chessPieceMap.put("a8", new ChessPiece(BLACK,ROOK,getApplicationContext()));
-        chessPieceMap.put("h8", new ChessPiece(BLACK,ROOK,getApplicationContext()));
-        chessPieceMap.put("a1", new ChessPiece(WHITE,ROOK,getApplicationContext()));
-        chessPieceMap.put("h1", new ChessPiece(WHITE,ROOK,getApplicationContext()));
+        chessPieceMap.put("a8", new ChessPiece(BLACK,ROOK,"a8",getApplicationContext()));
+        chessPieceMap.put("h8", new ChessPiece(BLACK,ROOK,"h8",getApplicationContext()));
+        chessPieceMap.put("a1", new ChessPiece(WHITE,ROOK,"a1",getApplicationContext()));
+        chessPieceMap.put("h1", new ChessPiece(WHITE,ROOK,"h1", getApplicationContext()));
 
     }//initChessPieces
 

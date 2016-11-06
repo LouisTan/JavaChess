@@ -6,6 +6,8 @@ import android.graphics.BitmapFactory;
 
 import inf3995_03.javachess.R;
 
+import static inf3995_03.javachess.view.BoardActivity.chessPieceMap;
+
 /**
  * Created by lester on 16-11-05.
  * Based on http://faculty.washington.edu/stepp/courses/2005spring/tcss360/lectures/files/2005-05-25/Piece.java
@@ -24,72 +26,72 @@ public class ChessPiece{
 
     private String color;
     private String type;
-    //private ChessSquare position;
     private Bitmap image;
+    private String position;
 
 
-    public ChessPiece(String color, String type, Context context){//, String position) {
-        if (!(color.equals(BLACK)  || color.equals(WHITE))
-            || !(type.equals(KING) || type.equals(QUEEN)
-            || type.equals(BISHOP) || type.equals(KNIGHT)
-            || type.equals(ROOK)   || type.equals(PAWN)))
+    public ChessPiece(String color, String type, String position, Context context) {
         {
-           throw new IllegalArgumentException();
-        }
-
-        this.color = color;
-        this.type = type;
-        //this.context = getApplicationContext();
-        //this.position = chessMap.get(position);
-
-        if (color.equals(BLACK)) {
-            switch (type){
-                case KING:
-                    this.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.piece_kb);
-                    break;
-                case QUEEN:
-                    this.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.piece_qb);
-                    break;
-                case BISHOP:
-                    this.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.piece_bb);
-                    break;
-                case KNIGHT:
-                    this.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.piece_nb);
-                    break;
-                case ROOK:
-                    this.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.piece_rb);
-                    break;
-                case PAWN:
-                    this.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.piece_pb);
-                    break;
+            if (!(color.equals(BLACK) || color.equals(WHITE))
+                    || !(type.equals(KING) || type.equals(QUEEN)
+                    || type.equals(BISHOP) || type.equals(KNIGHT)
+                    || type.equals(ROOK) || type.equals(PAWN))) {
+                throw new IllegalArgumentException();
             }
 
-        } else {
-            switch (type){
-                case KING:
-                    this.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.piece_kw);
-                    break;
-                case QUEEN:
-                    this.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.piece_qw);
-                    break;
-                case BISHOP:
-                    this.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.piece_bw);
-                    break;
-                case KNIGHT:
-                    this.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.piece_nw);
-                    break;
-                case ROOK:
-                    this.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.piece_rw);
-                    break;
-                case PAWN:
-                    this.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.piece_pw);
-                    break;
+            this.color = color;
+            this.type = type;
+            this.position = position;
+
+
+            if (color.equals(BLACK)) {
+                switch (type) {
+                    case KING:
+                        this.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.piece_kb);
+                        break;
+                    case QUEEN:
+                        this.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.piece_qb);
+                        break;
+                    case BISHOP:
+                        this.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.piece_bb);
+                        break;
+                    case KNIGHT:
+                        this.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.piece_nb);
+                        break;
+                    case ROOK:
+                        this.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.piece_rb);
+                        break;
+                    case PAWN:
+                        this.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.piece_pb);
+                        break;
+                }
+
+            } else {
+                switch (type) {
+                    case KING:
+                        this.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.piece_kw);
+                        break;
+                    case QUEEN:
+                        this.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.piece_qw);
+                        break;
+                    case BISHOP:
+                        this.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.piece_bw);
+                        break;
+                    case KNIGHT:
+                        this.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.piece_nw);
+                        break;
+                    case ROOK:
+                        this.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.piece_rw);
+                        break;
+                    case PAWN:
+                        this.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.piece_pw);
+                        break;
+                }
+
             }
 
-        }
-
-    } //ChessPiece
-
+        } //ChessPiece
+    }
 
     //Getters
     public String getColor() {
@@ -100,9 +102,9 @@ public class ChessPiece{
         return type;
     }
 
-   /* public ChessSquare getPosition() {
+    public String getPosition() {
         return position;
-    }*/
+    }
 
     public Bitmap getImage() {
         return image;
@@ -115,9 +117,9 @@ public class ChessPiece{
 
     //(No setter for type)
 
-   /* public void setPosition(ChessSquare position) {
+   public void setPosition(String position) {
         this.position = position;
-    }*/
+    }
 
     public void setImage(Bitmap image) {
          this.image = image;
