@@ -1,41 +1,50 @@
 package inf3995_03.javachess.model;
 
-import android.content.Context;
-import android.graphics.Canvas;
-import android.util.AttributeSet;
-import android.widget.ImageView;
+import inf3995_03.javachess.view.ChessSquareView;
 
-import inf3995_03.javachess.model.ChessPiece;
+import static inf3995_03.javachess.view.BoardActivity.chessSquaresMap;
 
 /**
- * Created by lester on 16-11-03.
+ * Created by lester on 16-11-05.
  */
 
-public class ChessSquare extends ImageView {
-    private boolean isBusy;
-    private String position;
+public class ChessSquare {
 
-    public ChessSquare(Context context){
-        super(context);
-        setClickable(true);
+    private boolean vacancy;
+    private String position;
+    private ChessSquareView chessSquare;
+
+    public ChessSquare(String position) {
+
+        this.position = position;
+        this.chessSquare = chessSquaresMap.get(position);
+
     }
 
     //Getters
-    public boolean getIsBusy() {
-        return this.isBusy;
+    public boolean getVacancy() {
+        return vacancy;
     }
 
     public String getPosition() {
         return position;
     }
 
+    public ChessSquareView getChessSquare() {
+        return chessSquare;
+    }
+
     //Setters
-    public void setIsBusy(boolean isBusy) {
-        this.isBusy = isBusy;
+    public void setVacancy(boolean vacancy) {
+        this.vacancy = vacancy;
     }
 
     public void setPosition(String position) {
         this.position = position;
+    }
+
+    public void setChessSquare(ChessSquareView chessSquare) {
+        this.chessSquare = chessSquare;
     }
 
 }

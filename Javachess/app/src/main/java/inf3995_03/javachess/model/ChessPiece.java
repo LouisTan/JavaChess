@@ -6,8 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 
 import inf3995_03.javachess.R;
 
-import static inf3995_03.javachess.view.BoardActivity.chessMap;
-
 /**
  * Created by lester on 16-11-05.
  * Based on http://faculty.washington.edu/stepp/courses/2005spring/tcss360/lectures/files/2005-05-25/Piece.java
@@ -41,8 +39,6 @@ public class ChessPiece extends AppCompatActivity{
         this.color = color;
         this.type = type;
         //this.position = chessMap.get(position);
-
-
 
         if (color.equals(BLACK)) {
             switch (type){
