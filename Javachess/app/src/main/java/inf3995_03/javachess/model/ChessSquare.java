@@ -2,7 +2,7 @@ package inf3995_03.javachess.model;
 
 import inf3995_03.javachess.view.ChessSquareView;
 
-import static inf3995_03.javachess.view.BoardActivity.chessSquaresMap;
+import static inf3995_03.javachess.view.BoardActivity.chessSquareViewMap;
 
 /**
  * Created by lester on 16-11-05.
@@ -17,7 +17,7 @@ public class ChessSquare {
     public ChessSquare(String position) {
 
         this.position = position;
-        this.chessSquare = chessSquaresMap.get(position);
+        this.chessSquare = chessSquareViewMap.get(position);
 
     }
 

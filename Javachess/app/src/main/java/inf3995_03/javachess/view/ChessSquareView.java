@@ -13,7 +13,7 @@ public class ChessSquareView extends ImageView {
 
     public ChessSquareView(Context context){
         super(context);
-        setClickable(true); //To comment... an empty square shouldn't be clickable
+        setClickable(true); //TODO: ...an empty square shouldn't be clickable
 
         /*if (vacancy) {
             setClickable(true);
@@ -28,6 +28,14 @@ public class ChessSquareView extends ImageView {
     @Override
     protected void onDraw(Canvas canvas){
         super.onDraw(canvas);
+
+
+
+        //canvas.setBitmap(drawGraph);
+
+        //canvas.drawBitmap(drawGraph, 100, 100, bgPaint);
+        /*ImageView myImageView = (ImageView) findViewById(R.id.your_imageview_id);
+        myImageView.setImageResource(R.drawable.mypicture);*/
 
     }
 

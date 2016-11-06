@@ -1,8 +1,8 @@
 package inf3995_03.javachess.model;
 
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.support.v7.app.AppCompatActivity;
 
 import inf3995_03.javachess.R;
 
@@ -11,7 +11,7 @@ import inf3995_03.javachess.R;
  * Based on http://faculty.washington.edu/stepp/courses/2005spring/tcss360/lectures/files/2005-05-25/Piece.java
  */
 
-public class ChessPiece extends AppCompatActivity{
+public class ChessPiece{
     public static final String BLACK = "Black";
     public static final String WHITE = "White";
 
@@ -27,7 +27,8 @@ public class ChessPiece extends AppCompatActivity{
     //private ChessSquare position;
     private Bitmap image;
 
-    public ChessPiece(String color, String type){//, String position) {
+
+    public ChessPiece(String color, String type, Context context){//, String position) {
         if (!(color.equals(BLACK)  || color.equals(WHITE))
             || !(type.equals(KING) || type.equals(QUEEN)
             || type.equals(BISHOP) || type.equals(KNIGHT)
@@ -38,52 +39,55 @@ public class ChessPiece extends AppCompatActivity{
 
         this.color = color;
         this.type = type;
+        //this.context = getApplicationContext();
         //this.position = chessMap.get(position);
 
         if (color.equals(BLACK)) {
             switch (type){
                 case KING:
-                    this.image = BitmapFactory.decodeResource(getResources(), R.drawable.piece_kb);
+                    this.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.piece_kb);
                     break;
                 case QUEEN:
-                    this.image = BitmapFactory.decodeResource(getResources(), R.drawable.piece_qb);
+                    this.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.piece_qb);
                     break;
                 case BISHOP:
-                    this.image = BitmapFactory.decodeResource(getResources(), R.drawable.piece_bb);
+                    this.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.piece_bb);
                     break;
                 case KNIGHT:
-                    this.image = BitmapFactory.decodeResource(getResources(), R.drawable.piece_nb);
+                    this.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.piece_nb);
                     break;
                 case ROOK:
-                    this.image = BitmapFactory.decodeResource(getResources(), R.drawable.piece_rb);
+                    this.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.piece_rb);
                     break;
                 case PAWN:
-                    this.image = BitmapFactory.decodeResource(getResources(), R.drawable.piece_pb);
+                    this.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.piece_pb);
                     break;
             }
 
         } else {
             switch (type){
                 case KING:
-                    this.image = BitmapFactory.decodeResource(getResources(), R.drawable.piece_kw);
+                    this.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.piece_kw);
                     break;
                 case QUEEN:
-                    this.image = BitmapFactory.decodeResource(getResources(), R.drawable.piece_qw);
+                    this.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.piece_qw);
                     break;
                 case BISHOP:
-                    this.image = BitmapFactory.decodeResource(getResources(), R.drawable.piece_bw);
+                    this.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.piece_bw);
                     break;
                 case KNIGHT:
-                    this.image = BitmapFactory.decodeResource(getResources(), R.drawable.piece_nw);
+                    this.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.piece_nw);
                     break;
                 case ROOK:
-                    this.image = BitmapFactory.decodeResource(getResources(), R.drawable.piece_rw);
+                    this.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.piece_rw);
                     break;
                 case PAWN:
-                    this.image = BitmapFactory.decodeResource(getResources(), R.drawable.piece_pw);
+                    this.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.piece_pw);
                     break;
             }
+
         }
+
     } //ChessPiece
 
 
