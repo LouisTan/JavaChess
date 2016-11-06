@@ -5,8 +5,8 @@ import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
 
 import inf3995_03.javachess.R;
-import inf3995_03.javachess.view.BoardActivity;
 
+import static inf3995_03.javachess.view.BoardActivity.chessMap;
 
 /**
  * Created by lester on 16-11-05.
@@ -26,21 +26,24 @@ public class ChessPiece extends AppCompatActivity{
 
     private String color;
     private String type;
-    private String position;
+    private ChessSquare position;
     private Bitmap image;
 
     public ChessPiece(String color, String type, String position) {
         if (!(color.equals(BLACK) || color.equals(WHITE))
-                || !(type.equals(KING) || type.equals(QUEEN)
-                || type.equals(BISHOP) || type.equals(KNIGHT)
-                || type.equals(ROOK) || type.equals(PAWN))
-                || !BoardActivity.isOnBoard(position)) {
-            throw new IllegalArgumentException();
+           || !(type.equals(KING) || type.equals(QUEEN)
+           || type.equals(BISHOP) || type.equals(KNIGHT)
+           || type.equals(ROOK)   || type.equals(PAWN))){
+         //|| !ChessSquare.isOccupied(position))
+      //{
+           throw new IllegalArgumentException();
         }
 
         this.color = color;
         this.type = type;
-        this.position = position;
+        this.position = chessMap.get(position);
+
+
 
         if (color.equals(BLACK)) {
             switch (type){
@@ -86,7 +89,6 @@ public class ChessPiece extends AppCompatActivity{
                     break;
             }
         }
-
     } //ChessPiece
 
 
@@ -99,7 +101,7 @@ public class ChessPiece extends AppCompatActivity{
         return type;
     }
 
-    public String getPosition() {
+    public ChessSquare getPosition() {
         return position;
     }
 
@@ -112,14 +114,15 @@ public class ChessPiece extends AppCompatActivity{
         this.color = color;
     }
 
+    //(No setter for type)
 
-
-    public void setPosition(String position) {
+    public void setPosition(ChessSquare position) {
         this.position = position;
     }
 
     public void setImage(Bitmap image) {
          this.image = image;
     }
+
 
 }
