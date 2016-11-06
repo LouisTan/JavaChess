@@ -17,15 +17,11 @@ public class CycleStateListener implements View.OnTouchListener {
             Drawable back = arg0.getBackground();
             switch(back.getLevel()){
                 case 0:
-                    Log.d("CycleListener", "Level 0");
+                    Log.d("CycleListener", "Level 1");
                     back.setLevel(1);
                     break;
                 case 1:
-                    Log.d("CycleListener", "Level 1");
-                    back.setLevel(2);
-                    break;
-                case 2:
-                    Log.d("OnTouch", "Level 2");
+                    Log.d("CycleListener", "Level 0");
                     back.setLevel(0);
                     break;
             }
@@ -33,4 +29,5 @@ public class CycleStateListener implements View.OnTouchListener {
         }
         return false;
     }
+
 }

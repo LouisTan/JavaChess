@@ -94,12 +94,10 @@ public class BoardActivity extends AppCompatActivity {
 
     }//initChessPieces
 
-
     public void drawChessPieces(){
         for (Map.Entry<String, ChessPiece> entry :chessPieceMap.entrySet()) {
             chessSquareViewMap.get(entry.getKey()).setImageBitmap(chessPieceMap.get(entry.getKey()).getImage());
             chessSquareViewMap.get(entry.getKey()).setOnTouchListener(stateListener);
         }
-
     }//drawChessPieces()
 }
