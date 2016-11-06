@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import java.util.HashMap;
+import java.util.Map;
 
 import inf3995_03.javachess.R;
 import inf3995_03.javachess.controller.CycleStateListener;
@@ -20,8 +21,8 @@ import static inf3995_03.javachess.model.ChessPiece.BLACK;
 
 public class BoardActivity extends AppCompatActivity {
 
-    public static final HashMap<String, ChessSquareView> chessSquareViewMap = new HashMap<>();
-    public static final HashMap<String, ChessPiece> chessPieceMap = new HashMap<>();
+    public static final Map<String, ChessSquareView> chessSquareViewMap = new HashMap<>();
+    public static final Map<String, ChessPiece> chessPieceMap = new HashMap<>();
 
     private CycleStateListener stateListener = new CycleStateListener();
 
@@ -32,6 +33,14 @@ public class BoardActivity extends AppCompatActivity {
 
         initChessSquares();
         initChessPieces();
+        /*
+        T-ODO: chessSquareViewMap.get(pos).setOnTouchListener(stateListener) should be called after
+        intiChessSquares() and initChessPieces() so we can only touch the squares occupied by a chess piece.
+
+        initTouchEvents();
+         */
+
+        drawChessPieces();
     }
 
     public void initChessSquares() {
@@ -93,4 +102,11 @@ public class BoardActivity extends AppCompatActivity {
 
     }//initChessPieces
 
+
+    public void drawChessPieces(){
+        for (Map.Entry<String, ChessPiece> entry :chessPieceMap.entrySet()) {
+            chessSquareViewMap.get(entry.getKey()).setImageBitmap(chessPieceMap.get(entry.getKey()).getImage());
+        }
+
+    }//drawChessPieces()
 }
