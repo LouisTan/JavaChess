@@ -12,10 +12,12 @@ public class ChessSquareView extends ImageView {
 
     public ChessSquareView(Context context){
         super(context);
+        setFocusableInTouchMode(true);
     }
 
     public ChessSquareView(Context context, AttributeSet attributes) {
         super(context, attributes);
+        setFocusableInTouchMode(true);
     }
 
 }

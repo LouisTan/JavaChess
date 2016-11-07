@@ -25,8 +25,8 @@ public class BoardActivity extends AppCompatActivity {
     public static final Map<String, ChessSquareView> chessSquareViewMap = new HashMap<>();
     public static final Map<String, ChessPiece> chessPieceMap = new HashMap<>();
 
-    private CycleStateListener stateListener = new CycleStateListener();
-    private FocusStateListener focusListener = new FocusStateListener();
+    public static CycleStateListener stateListener = new CycleStateListener();
+    public static FocusStateListener focusListener = new FocusStateListener();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,7 +96,7 @@ public class BoardActivity extends AppCompatActivity {
 
     }//initChessPieces
 
-    public void drawChessPieces(){
+    public static void drawChessPieces(){
         for (Map.Entry<String, ChessPiece> entry :chessPieceMap.entrySet()) {
             chessSquareViewMap.get(entry.getKey()).setImageBitmap(chessPieceMap.get(entry.getKey()).getImage());
             chessSquareViewMap.get(entry.getKey()).setOnTouchListener(stateListener);
