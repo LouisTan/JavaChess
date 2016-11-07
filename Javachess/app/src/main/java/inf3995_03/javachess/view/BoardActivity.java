@@ -8,6 +8,7 @@ import java.util.Map;
 
 import inf3995_03.javachess.R;
 import inf3995_03.javachess.controller.CycleStateListener;
+import inf3995_03.javachess.controller.FocusStateListener;
 import inf3995_03.javachess.model.ChessPiece;
 
 import static inf3995_03.javachess.model.ChessPiece.BISHOP;
@@ -25,6 +26,7 @@ public class BoardActivity extends AppCompatActivity {
     public static final Map<String, ChessPiece> chessPieceMap = new HashMap<>();
 
     private CycleStateListener stateListener = new CycleStateListener();
+    private FocusStateListener focusListener = new FocusStateListener();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,6 +100,7 @@ public class BoardActivity extends AppCompatActivity {
         for (Map.Entry<String, ChessPiece> entry :chessPieceMap.entrySet()) {
             chessSquareViewMap.get(entry.getKey()).setImageBitmap(chessPieceMap.get(entry.getKey()).getImage());
             chessSquareViewMap.get(entry.getKey()).setOnTouchListener(stateListener);
+            chessSquareViewMap.get(entry.getKey()).setOnFocusChangeListener(focusListener);
         }
     }//drawChessPieces()
 }

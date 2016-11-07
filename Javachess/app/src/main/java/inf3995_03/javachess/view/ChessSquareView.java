@@ -12,12 +12,10 @@ public class ChessSquareView extends ImageView {
 
     public ChessSquareView(Context context){
         super(context);
-        setClickable(true);
     }
 
     public ChessSquareView(Context context, AttributeSet attributes) {
         super(context, attributes);
-        setClickable(true);
     }
 
 }

@@ -5,6 +5,8 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
+import inf3995_03.javachess.view.ChessSquareView;
+
 /**
  * Created by lester on 16-11-03.
  * Based on https://staticallytyped.wordpress.com/2011/02/01/android-avoiding-custom-views-with-resources-cont/
@@ -12,11 +14,13 @@ import android.view.View;
 
 public class CycleStateListener implements View.OnTouchListener {
     @Override
-    public boolean onTouch(View arg0, MotionEvent arg1) {
-        if(arg1.getAction() == MotionEvent.ACTION_DOWN){
-            Drawable back = arg0.getBackground();
+    public boolean onTouch(View v, MotionEvent event) {
+        if(event.getAction() == MotionEvent.ACTION_DOWN){
+            Drawable back = v.getBackground();
             switch(back.getLevel()){
                 case 0:
+                    v.requestFocus();
+                    if(v.isFocused())
                     Log.d("CycleListener", "Level 1");
                     back.setLevel(1);
                     break;
