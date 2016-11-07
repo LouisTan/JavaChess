@@ -4,24 +4,31 @@ import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.view.View;
 
-import inf3995_03.javachess.view.BoardActivity;
+import static inf3995_03.javachess.view.BoardActivity.onHold;
+import static inf3995_03.javachess.view.BoardActivity.setFocusOnBoard;
+import static inf3995_03.javachess.view.BoardActivity.setFocusOnPieces;
 
 /**
  * Created by lester on 16-11-06.
  */
 
-//Not sure to use it yet
 public class FocusStateListener implements View.OnFocusChangeListener {
 
     @Override
     public void onFocusChange(View v, boolean hasFocus)
     {
-        if(hasFocus) {
+        if(hasFocus && onHold) {
             Log.d("FocusListener", "On focus");
+            setFocusOnBoard();
+
         }else {
-            Log.d("FocusListener", "Lost focus");
+            Log.d("FocusListener", "Changed focus");
             Drawable back = v.getBackground();
             back.setLevel(0);
+
+
+
+            setFocusOnPieces();;
         }
     }
 

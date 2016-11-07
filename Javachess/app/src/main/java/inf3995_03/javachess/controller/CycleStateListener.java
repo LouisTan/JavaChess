@@ -5,7 +5,7 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
-import inf3995_03.javachess.view.ChessSquareView;
+import static inf3995_03.javachess.view.BoardActivity.onHold;
 
 /**
  * Created by lester on 16-11-03.
@@ -20,10 +20,12 @@ public class CycleStateListener implements View.OnTouchListener {
             switch(back.getLevel()){
                 case 0:
                     v.requestFocus();
+                    onHold = true;
                     Log.d("CycleListener", "Level 1");
                     back.setLevel(1);
                     break;
                 case 1:
+                    onHold = false;
                     Log.d("CycleListener", "Level 0");
                     back.setLevel(0);
                     break;

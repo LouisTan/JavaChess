@@ -25,8 +25,11 @@ public class BoardActivity extends AppCompatActivity {
     public static final Map<String, ChessSquareView> chessSquareViewMap = new HashMap<>();
     public static final Map<String, ChessPiece> chessPieceMap = new HashMap<>();
 
+    //public static until proven wrong
     public static CycleStateListener stateListener = new CycleStateListener();
     public static FocusStateListener focusListener = new FocusStateListener();
+
+    public static boolean onHold = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +39,7 @@ public class BoardActivity extends AppCompatActivity {
         initChessSquares();
         initChessPieces();
         drawChessPieces();
+        setFocusOnPieces();
     }
 
     public void initChessSquares() {
@@ -99,8 +103,26 @@ public class BoardActivity extends AppCompatActivity {
     public static void drawChessPieces(){
         for (Map.Entry<String, ChessPiece> entry :chessPieceMap.entrySet()) {
             chessSquareViewMap.get(entry.getKey()).setImageBitmap(chessPieceMap.get(entry.getKey()).getImage());
-            chessSquareViewMap.get(entry.getKey()).setOnTouchListener(stateListener);
-            chessSquareViewMap.get(entry.getKey()).setOnFocusChangeListener(focusListener);
         }
     }//drawChessPieces()
+
+    public static void setFocusOnPieces(){
+        for (String key: chessSquareViewMap.keySet()){
+            if (chessPieceMap.keySet().contains(key)){
+                chessSquareViewMap.get(key).setOnTouchListener(stateListener);
+                chessSquareViewMap.get(key).setOnFocusChangeListener(focusListener);
+            }else {
+                chessSquareViewMap.get(key).setOnTouchListener(null);
+                chessSquareViewMap.get(key).setOnFocusChangeListener(null);
+            }
+        }
+    }//setFocusOnPieces()
+
+    public static void setFocusOnBoard(){
+        for (String key: chessSquareViewMap.keySet()){
+            chessSquareViewMap.get(key).setOnTouchListener(stateListener);
+            chessSquareViewMap.get(key).setOnFocusChangeListener(focusListener);
+        }
+    }//setFocusOnBoard()
+
 }
