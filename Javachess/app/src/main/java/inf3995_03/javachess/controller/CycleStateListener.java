@@ -20,7 +20,6 @@ public class CycleStateListener implements View.OnTouchListener {
             switch(back.getLevel()){
                 case 0:
                     v.requestFocus();
-                    if(v.isFocused())
                     Log.d("CycleListener", "Level 1");
                     back.setLevel(1);
                     break;
