@@ -6,6 +6,7 @@ import android.view.View;
 
 import static inf3995_03.javachess.view.BoardActivity.moveChessPiece;
 import static inf3995_03.javachess.view.BoardActivity.onHold;
+import static inf3995_03.javachess.view.BoardActivity.piecesHeld;
 import static inf3995_03.javachess.view.BoardActivity.setFocusOnBoard;
 
 /**
@@ -15,18 +16,15 @@ import static inf3995_03.javachess.view.BoardActivity.setFocusOnBoard;
 public class FocusStateListener implements View.OnFocusChangeListener {
 
     @Override
-    public void onFocusChange(View v, boolean hasFocus)
-    {
-        if (hasFocus && onHold) {
-            Log.d("FocusListener", "On focus");
-            moveChessPiece(v);
-        }else {
-            Log.d("FocusListener", "Changed focus");
-            Drawable back = v.getBackground();
-            back.setLevel(0);
-        }
+    public void onFocusChange(View v, boolean hasFocus) {
+            if (hasFocus) {
+                Log.d("FocusListener", "On focus");
+                moveChessPiece(v);
+
+            } else {
+                Log.d("FocusListener", "Changed focus");
+                Drawable back = v.getBackground();
+                back.setLevel(0);
+            }
     }
-
-
-
 }

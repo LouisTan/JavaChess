@@ -21,12 +21,11 @@ public class CycleStateListener implements View.OnTouchListener {
                 case 0:
                     Log.d("CycleListener", "Level 1");
                     onHold = true;
-                    v.requestFocusFromTouch();
+                    v.requestFocus();
                     back.setLevel(1);
                     break;
                 case 1:
                     Log.d("CycleListener", "Level 0");
-                    //onHold = false;
                     back.setLevel(0);
                     break;
             }

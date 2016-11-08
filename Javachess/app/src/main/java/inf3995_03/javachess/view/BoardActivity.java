@@ -43,7 +43,6 @@ public class BoardActivity extends AppCompatActivity {
         initChessSquares();
         initChessPieces();
         drawChessPieces();
-
     }
 
     public void initChessSquares() {
@@ -60,7 +59,7 @@ public class BoardActivity extends AppCompatActivity {
                 chessSquareViewMap.put(pos, (ChessSquareView) findViewById(idRes));
             }
         }
-    }//initChessSquares
+    }//initChessSquares()
 
     public void initChessPieces(){
 
@@ -71,7 +70,7 @@ public class BoardActivity extends AppCompatActivity {
             String pos = col + Integer.toString(7);
 
             chessPieceMap.put(pos, new ChessPiece(BLACK,PAWN,pos,getApplicationContext()));
-        }
+        }//initChessPieces()
 
         //White pawns initialisation
         for (int i = 97; i<105; i++) {
@@ -101,13 +100,13 @@ public class BoardActivity extends AppCompatActivity {
         chessPieceMap.put("h8", new ChessPiece(BLACK,ROOK,"h8",getApplicationContext()));
         chessPieceMap.put("a1", new ChessPiece(WHITE,ROOK,"a1",getApplicationContext()));
         chessPieceMap.put("h1", new ChessPiece(WHITE,ROOK,"h1", getApplicationContext()));
-
-    }//initChessPieces
+    }//initChessPieces()
 
     public static void drawChessPieces(){
         for (String key: chessPieceMap.keySet()){
             chessSquareViewMap.get(key).setImageBitmap(chessPieceMap.get(key).getImage());
         }
+
         setFocusOnPieces();
     }//drawChessPieces()
 
@@ -126,12 +125,13 @@ public class BoardActivity extends AppCompatActivity {
             chessPieceMap.remove(source);
 
             chessSquareViewMap.get(source).setImageBitmap(null);
+
+            v.clearFocus();
             drawChessPieces();
         }else{
             setFocusOnBoard();
         }
-    }
-
+    }//moveChessPiece
 
     public static void setFocusOnPieces(){
         for (String key: chessSquareViewMap.keySet()){
@@ -151,5 +151,7 @@ public class BoardActivity extends AppCompatActivity {
             chessSquareViewMap.get(key).setOnFocusChangeListener(focusListener);
         }
     }//setFocusOnBoard()
+
+
 
 }
