@@ -1,10 +1,13 @@
 package inf3995_03.javachess.view;
 
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Stack;
 
 import inf3995_03.javachess.R;
 import inf3995_03.javachess.controller.CycleStateListener;
@@ -28,8 +31,9 @@ public class BoardActivity extends AppCompatActivity {
     //public static until proven wrong
     public static CycleStateListener stateListener = new CycleStateListener();
     public static FocusStateListener focusListener = new FocusStateListener();
-
     public static boolean onHold = false;
+
+    public static Stack piecesHeld = new Stack();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +43,7 @@ public class BoardActivity extends AppCompatActivity {
         initChessSquares();
         initChessPieces();
         drawChessPieces();
-        setFocusOnPieces();
+
     }
 
     public void initChessSquares() {
@@ -101,10 +105,33 @@ public class BoardActivity extends AppCompatActivity {
     }//initChessPieces
 
     public static void drawChessPieces(){
-        for (Map.Entry<String, ChessPiece> entry :chessPieceMap.entrySet()) {
-            chessSquareViewMap.get(entry.getKey()).setImageBitmap(chessPieceMap.get(entry.getKey()).getImage());
+        for (String key: chessPieceMap.keySet()){
+            chessSquareViewMap.get(key).setImageBitmap(chessPieceMap.get(key).getImage());
         }
+        setFocusOnPieces();
     }//drawChessPieces()
+
+    public static void moveChessPiece(View v) {
+        piecesHeld.push(v.getResources().getResourceEntryName(v.getId()));
+        if (piecesHeld.size() == 2) {
+            String destination = (String) piecesHeld.pop();
+            String source = (String) piecesHeld.pop();
+
+            if(chessPieceMap.containsKey(destination)) {
+                chessPieceMap.remove(destination);
+            }
+
+            chessPieceMap.get(source).setPosition(destination);
+            chessPieceMap.put(destination, chessPieceMap.get(source));
+            chessPieceMap.remove(source);
+
+            chessSquareViewMap.get(source).setImageBitmap(null);
+            drawChessPieces();
+        }else{
+            setFocusOnBoard();
+        }
+    }
+
 
     public static void setFocusOnPieces(){
         for (String key: chessSquareViewMap.keySet()){

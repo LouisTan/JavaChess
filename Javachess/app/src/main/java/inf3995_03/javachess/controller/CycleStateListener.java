@@ -19,14 +19,14 @@ public class CycleStateListener implements View.OnTouchListener {
             Drawable back = v.getBackground();
             switch(back.getLevel()){
                 case 0:
-                    v.requestFocus();
-                    onHold = true;
                     Log.d("CycleListener", "Level 1");
+                    onHold = true;
+                    v.requestFocusFromTouch();
                     back.setLevel(1);
                     break;
                 case 1:
-                    onHold = false;
                     Log.d("CycleListener", "Level 0");
+                    //onHold = false;
                     back.setLevel(0);
                     break;
             }

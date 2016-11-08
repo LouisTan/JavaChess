@@ -33,9 +33,8 @@ public class ChessPiece extends AppCompatActivity{
     private Bitmap image;
     private String position;
 
-
     public ChessPiece(String color, String type, String position, Context context) {
-        if (!(color.equals(BLACK)      || color.equals(WHITE))
+        if (!(color.equals(BLACK)  || color.equals(WHITE))
             || !(type.equals(KING) || type.equals(QUEEN)
             || type.equals(BISHOP) || type.equals(KNIGHT)
             || type.equals(ROOK)   || type.equals(PAWN)))
@@ -47,7 +46,7 @@ public class ChessPiece extends AppCompatActivity{
         this.type = type;
         this.position = position;
         //Let's hardcode the size to be (36x36)dp for now
-        Bitmap unResizedImage =null;
+        Bitmap unResizedImage = null;
 
         if (color.equals(BLACK)) {
             switch (type) {
@@ -127,6 +126,5 @@ public class ChessPiece extends AppCompatActivity{
         BitmapResizer.resize(image,36,36);
         this.image = image;
     }
-
 
 }
