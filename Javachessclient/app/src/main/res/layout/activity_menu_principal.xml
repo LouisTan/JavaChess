@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollview"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player1 : "
+                android:textStyle="bold"
+                android:textColor="#234CA5"
+                android:gravity="center"
+                />
+            <EditText
+                android:id="@+id/Player1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Player1"
+                android:inputType="textEmailAddress"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player2 : "
+                android:textStyle="bold"
+                android:textColor="#234CA5"
+                android:gravity="center"
+                />
+            <EditText
+                android:id="@+id/Player2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Player2"
+                android:inputType="textEmailAddress"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Round : "
+                android:textStyle="bold"
+                android:textColor="#234CA5"
+                android:gravity="center"
+                />
+            <EditText
+                android:id="@+id/round"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="round"
+                android:inputType="textEmailAddress"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location : "
+                android:textStyle="bold"
+                android:textColor="#234CA5"
+                android:gravity="center"
+                />
+            <EditText
+                android:id="@+id/Location"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Location"
+                android:inputType="textEmailAddress"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CodeSecret : "
+                android:textStyle="bold"
+                android:textColor="#234CA5"
+                android:gravity="center"
+                />
+            <EditText
+                android:id="@+id/CodeSecret"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="CodeSecret"
+                android:inputType="textEmailAddress"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temps alloué : "
+                android:textStyle="bold"
+                android:textColor="#234CA5"
+                android:gravity="center"
+                />
+            <EditText
+                android:id="@+id/temps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="temps"
+                android:inputType="number"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temps pour chaque coup : "
+                android:textStyle="bold"
+                android:textColor="#234CA5"
+                android:gravity="center"
+                />
+            <EditText
+                android:id="@+id/tempsCoup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="temps coup"
+                android:inputType="number"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Limite : "
+                android:textStyle="bold"
+                android:textColor="#234CA5"
+                android:gravity="center"
+                />
+            <EditText
+                android:id="@+id/limit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Limite"
+                android:inputType="number"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temps Prolongation : "
+                android:textStyle="bold"
+                android:textColor="#234CA5"
+                android:gravity="center"
+                />
+            <EditText
+                android:id="@+id/tempsProlongation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="tempsProlongation"
+                android:inputType="number"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Increment Prolongation : "
+                android:textStyle="bold"
+                android:textColor="#234CA5"
+                android:gravity="center"
+                />
+            <EditText
+                android:id="@+id/incrementProlongation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="incrementProlongation"
+                android:inputType="number"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/deuxTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deux tablettes !"
+            />
+        <CheckBox
+            android:id="@+id/enPassant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EnPassant !"
+            />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <Button
+                android:id="@+id/valider"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:text="Valider"></Button>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <Button
+                android:id="@+id/btnId"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:text="Commencer une partie"></Button>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+
+
+
+

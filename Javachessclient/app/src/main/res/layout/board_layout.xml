@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutid"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true" >
+
+    <!--Cases a-->
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/a2"
+    android:background="@drawable/square_black"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/a1" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/a3"
+    android:background="@drawable/square_white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/a2" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/a4"
+    android:background="@drawable/square_black"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/a3" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/a5"
+    android:background="@drawable/square_white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/a4" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/a6"
+    android:background="@drawable/square_black"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/a5" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/a7"
+    android:background="@drawable/square_white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/a6" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/a8"
+    android:background="@drawable/square_black"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/a7" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:background="@drawable/square_white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/a8" />
+
+    <!--Cases b-->
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/b2"
+    android:layout_toRightOf="@+id/a1"
+    android:background="@drawable/square_white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/b1" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/b3"
+    android:layout_toRightOf="@+id/a2"
+    android:background="@drawable/square_black"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/b2" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/b4"
+    android:layout_toRightOf="@+id/a3"
+    android:background="@drawable/square_white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/b3" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/b5"
+    android:layout_toRightOf="@+id/a4"
+    android:background="@drawable/square_black"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/b4" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/b6"
+    android:layout_toRightOf="@+id/a5"
+    android:background="@drawable/square_white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/b5" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/b7"
+    android:layout_toRightOf="@+id/a6"
+    android:background="@drawable/square_black"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/b6" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/b8"
+    android:layout_toRightOf="@+id/a7"
+    android:background="@drawable/square_white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/b7" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_toRightOf="@+id/a8"
+    android:background="@drawable/square_black"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/b8" />
+
+    <!--Cases c-->
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/c2"
+    android:layout_toRightOf="@+id/b1"
+    android:background="@drawable/square_black"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/c1" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/c3"
+    android:layout_toRightOf="@+id/b2"
+    android:background="@drawable/square_white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/c2" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/c4"
+    android:layout_toRightOf="@+id/b3"
+    android:background="@drawable/square_black"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/c3" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/c5"
+    android:layout_toRightOf="@+id/b4"
+    android:background="@drawable/square_white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/c4" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/c6"
+    android:layout_toRightOf="@+id/b5"
+    android:background="@drawable/square_black"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/c5" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/c7"
+    android:layout_toRightOf="@+id/b6"
+    android:background="@drawable/square_white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/c6" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/c8"
+    android:layout_toRightOf="@+id/b7"
+    android:background="@drawable/square_black"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/c7" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_toRightOf="@+id/b8"
+    android:background="@drawable/square_white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/c8" />
+
+    <!--Cases d-->
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/d2"
+    android:layout_toRightOf="@+id/c1"
+    android:background="@drawable/square_white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/d1" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/d3"
+    android:layout_toRightOf="@+id/c2"
+    android:background="@drawable/square_black"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/d2" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/d4"
+    android:layout_toRightOf="@+id/c3"
+    android:background="@drawable/square_white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/d3" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/d5"
+    android:layout_toRightOf="@+id/c4"
+    android:background="@drawable/square_black"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/d4" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/d6"
+    android:layout_toRightOf="@+id/c5"
+    android:background="@drawable/square_white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/d5" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/d7"
+    android:layout_toRightOf="@+id/c6"
+    android:background="@drawable/square_black"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/d6" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/d8"
+    android:layout_toRightOf="@+id/c7"
+    android:background="@drawable/square_white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/d7" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_toRightOf="@+id/c8"
+    android:background="@drawable/square_black"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/d8" />
+
+    <!--Cases e-->
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/e2"
+    android:layout_toRightOf="@+id/d1"
+    android:background="@drawable/square_black"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/e1" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/e3"
+    android:layout_toRightOf="@+id/d2"
+    android:background="@drawable/square_white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/e2" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/e4"
+    android:layout_toRightOf="@+id/d3"
+    android:background="@drawable/square_black"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/e3" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/e5"
+    android:layout_toRightOf="@+id/d4"
+    android:background="@drawable/square_white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/e4" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/e6"
+    android:layout_toRightOf="@+id/d5"
+    android:background="@drawable/square_black"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/e5" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/e7"
+    android:layout_toRightOf="@+id/d6"
+    android:background="@drawable/square_white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/e6" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/e8"
+    android:layout_toRightOf="@+id/d7"
+    android:background="@drawable/square_black"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/e7" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_toRightOf="@+id/d8"
+    android:background="@drawable/square_white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/e8" />
+
+    <!--Cases f-->
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/f2"
+    android:layout_toRightOf="@+id/e1"
+    android:background="@drawable/square_white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/f1" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/f3"
+    android:layout_toRightOf="@+id/e2"
+    android:background="@drawable/square_black"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/f2" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/f4"
+    android:layout_toRightOf="@+id/e3"
+    android:background="@drawable/square_white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/f3" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/f5"
+    android:layout_toRightOf="@+id/e4"
+    android:background="@drawable/square_black"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/f4" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/f6"
+    android:layout_toRightOf="@+id/e5"
+    android:background="@drawable/square_white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/f5" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/f7"
+    android:layout_toRightOf="@+id/e6"
+    android:background="@drawable/square_black"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/f6" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/f8"
+    android:layout_toRightOf="@+id/e7"
+    android:background="@drawable/square_white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/f7" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_toRightOf="@+id/e8"
+    android:background="@drawable/square_black"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/f8" />
+
+    <!--Cases g-->
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/g2"
+    android:layout_toRightOf="@+id/f1"
+    android:background="@drawable/square_black"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/g1" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/g3"
+    android:layout_toRightOf="@+id/f2"
+    android:background="@drawable/square_white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/g2" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/g4"
+    android:layout_toRightOf="@+id/f3"
+    android:background="@drawable/square_black"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/g3" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/g5"
+    android:layout_toRightOf="@+id/f4"
+    android:background="@drawable/square_white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/g4" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/g6"
+    android:layout_toRightOf="@+id/f5"
+    android:background="@drawable/square_black"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/g5" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/g7"
+    android:layout_toRightOf="@+id/f6"
+    android:background="@drawable/square_white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/g6" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/g8"
+    android:layout_toRightOf="@+id/f7"
+    android:background="@drawable/square_black"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/g7" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_toRightOf="@+id/f8"
+    android:background="@drawable/square_white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/g8" />
+
+    <!--Cases h-->
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/h2"
+    android:layout_toRightOf="@+id/g1"
+    android:background="@drawable/square_white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/h1" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/h3"
+    android:layout_toRightOf="@+id/g2"
+    android:background="@drawable/square_black"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/h2" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/h4"
+    android:layout_toRightOf="@+id/g3"
+    android:background="@drawable/square_white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/h3" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/h5"
+    android:layout_toRightOf="@+id/g4"
+    android:background="@drawable/square_black"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/h4" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/h6"
+    android:layout_toRightOf="@+id/g5"
+    android:background="@drawable/square_white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/h5" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/h7"
+    android:layout_toRightOf="@+id/g6"
+    android:background="@drawable/square_black"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/h6" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_below="@+id/h8"
+    android:layout_toRightOf="@+id/g7"
+    android:background="@drawable/square_white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/h7" />
+
+    <inf3995_03.javachess.view.ChessSquareView
+    android:layout_toRightOf="@+id/g8"
+    android:background="@drawable/square_black"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/h8" />
+    <Button
+        android:id="@+id/btnId"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Retour au menu principal"
+        android:textStyle="bold">
+    </Button>
+
+
+
+</RelativeLayout>
